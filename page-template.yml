@@ -1,6 +1,6 @@
 bootstrap.Page:
   cdn: true
-  theme: Journal
+  theme: Pulse
   name: Application Page Template
   language: EN
   stylesheets: 
