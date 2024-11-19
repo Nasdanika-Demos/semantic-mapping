@@ -27,7 +27,6 @@ public class TestDiagramMapping {
 		ResourceSet resourceSet = capabilityLoader.loadOne(requirement, progressMonitor);
 		File diagramFile = new File("diagram.drawio").getCanonicalFile();
 		Resource resource = resourceSet.getResource(URI.createFileURI(diagramFile.getAbsolutePath()), true);		
-		assertEquals(2, resource.getContents().size());
 		
 		// Saving for manual inspection
 		URI xmiURI = URI.createFileURI(new File("target/mapping.xml").getAbsolutePath());
@@ -36,6 +35,8 @@ public class TestDiagramMapping {
 		xmiResource.save(null);		
 		
 		// Assertions
+		assertEquals(3, resource.getContents().size());
+		
 		
 		
 	}

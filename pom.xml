@@ -68,6 +68,11 @@
 			<version>2024.11.0</version>
 		</dependency>
 		<dependency>
+			<groupId>org.nasdanika.models.family</groupId>
+			<artifactId>model</artifactId>
+			<version>2024.11.0</version>
+		</dependency>
+		<dependency>
 		    <groupId>org.apache.groovy</groupId>
 		    <artifactId>groovy-all</artifactId>
 		    <version>4.0.23</version>
