@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.IOException;
 
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -28,13 +27,12 @@ public class TestDiagramMapping {
 		ResourceSet resourceSet = capabilityLoader.loadOne(requirement, progressMonitor);
 		File diagramFile = new File("diagram.drawio").getCanonicalFile();
 		Resource resource = resourceSet.getResource(URI.createFileURI(diagramFile.getAbsolutePath()), true);		
-		assertEquals(1, resource.getContents().size()); // Single root
-		EObject root = resource.getContents().get(0);	
+		assertEquals(2, resource.getContents().size());
 		
 		// Saving for manual inspection
 		URI xmiURI = URI.createFileURI(new File("target/mapping.xml").getAbsolutePath());
 		Resource xmiResource = resourceSet.createResource(xmiURI);
-		xmiResource.getContents().add(EcoreUtil.copy(root));
+		xmiResource.getContents().addAll(EcoreUtil.copyAll(resource.getContents()));
 		xmiResource.save(null);		
 		
 		// Assertions
