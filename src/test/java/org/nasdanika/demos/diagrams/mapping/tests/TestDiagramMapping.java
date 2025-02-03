@@ -35,10 +35,7 @@ public class TestDiagramMapping {
 		xmiResource.save(null);		
 		
 		// Assertions
-		assertEquals(4, resource.getContents().size());
-		
-		
-		
+		assertEquals(4, resource.getContents().size());		
 	}
 		
 }
