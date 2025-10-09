@@ -72,6 +72,11 @@
 			<artifactId>model</artifactId>
 			<version>2025.6.0</version>
 		</dependency>
+        <dependency>
+            <groupId>org.nasdanika.models.bootstrap</groupId>
+            <artifactId>model</artifactId>
+            <version>2025.6.0</version>
+        </dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.nature</groupId>
 			<artifactId>model</artifactId>
