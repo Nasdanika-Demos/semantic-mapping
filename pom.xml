@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika.demos</groupId>
-	<version>2025.6.0</version>
+	<version>2025.10.0</version>
 	<artifactId>semantic-mapping</artifactId>
 	<packaging>jar</packaging>
 	<name>Semantic Mapping of Drawio diagrams</name>
@@ -22,14 +22,7 @@
 		        <plugin>
 		            <groupId>org.apache.maven.plugins</groupId>
 		            <artifactId>maven-surefire-plugin</artifactId>
-		            <version>3.5.3</version>
-		            <dependencies>
-		                <dependency>
-		                    <groupId>org.junit.jupiter</groupId>
-		                    <artifactId>junit-jupiter-engine</artifactId>
-		                    <version>5.12.1</version>
-		                </dependency>
-		            </dependencies>
+		            <version>3.5.4</version>
 		        </plugin>
 		</plugins>
 	</build>
@@ -55,56 +48,48 @@
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>maven</artifactId>
-			<version>2025.6.0</version>
+			<version>2025.10.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.architecture</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.6.0</version>
+			<version>2025.10.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.education</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.6.0</version>
+			<version>2025.10.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.family</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.6.0</version>
+			<version>2025.10.0</version>
 		</dependency>
         <dependency>
             <groupId>org.nasdanika.models.bootstrap</groupId>
-            <artifactId>model</artifactId>
-            <version>2025.6.0</version>
+            <artifactId>producer</artifactId>
+            <version>2025.10.0</version>
         </dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.nature</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.6.0</version>
+			<version>2025.10.0</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.apache.groovy</groupId>
-		    <artifactId>groovy-all</artifactId>
-		    <version>4.0.27</version>
-		    <type>pom</type>
+		    <artifactId>groovy-jsr223</artifactId>
+		    <version>5.0.1</version>
 		</dependency>
-	
-	        <dependency>
-        	    <groupId>org.junit.platform</groupId>
-	            <artifactId>junit-platform-engine</artifactId>
-	            <version>1.12.1</version>
-	            <scope>test</scope>
-	        </dependency>
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-api</artifactId>
-		    <version>5.12.1</version>
+		    <version>6.0.0</version>
 		    <scope>test</scope>
 		</dependency>		
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-engine</artifactId>
-		    <version>5.12.1</version>
+		    <version>6.0.0</version>
 		    <scope>test</scope>
 		</dependency>		
 	</dependencies>
