@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.nasdanika.demos</groupId>
-	<version>2025.10.0</version>
+	<version>2025.12.0</version>
 	<artifactId>semantic-mapping</artifactId>
 	<packaging>jar</packaging>
 	<name>Semantic Mapping of Drawio diagrams</name>
@@ -13,10 +13,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.14.0</version>
+				<version>3.14.1</version>
 				<configuration>
-					<source>21</source>
-					<target>21</target>
+					<release>21</release>
 				</configuration>
 			</plugin>
 		        <plugin>
@@ -48,48 +47,48 @@
 		<dependency>
 			<groupId>org.nasdanika.core</groupId>
 			<artifactId>maven</artifactId>
-			<version>2025.10.0</version>
+			<version>2025.12.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.architecture</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.10.0</version>
+			<version>2025.12.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.education</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.10.0</version>
+			<version>2025.12.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.family</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.10.0</version>
+			<version>2025.12.0</version>
 		</dependency>
         <dependency>
             <groupId>org.nasdanika.models.bootstrap</groupId>
             <artifactId>producer</artifactId>
-            <version>2025.10.0</version>
+            <version>2025.12.0</version>
         </dependency>
 		<dependency>
 			<groupId>org.nasdanika.models.nature</groupId>
 			<artifactId>model</artifactId>
-			<version>2025.10.0</version>
+			<version>2025.12.0</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.apache.groovy</groupId>
 		    <artifactId>groovy-jsr223</artifactId>
-		    <version>5.0.1</version>
+		    <version>5.0.3</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-api</artifactId>
-		    <version>6.0.0</version>
+		    <version>6.0.1</version>
 		    <scope>test</scope>
 		</dependency>		
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-engine</artifactId>
-		    <version>6.0.0</version>
+		    <version>6.0.1</version>
 		    <scope>test</scope>
 		</dependency>		
 	</dependencies>

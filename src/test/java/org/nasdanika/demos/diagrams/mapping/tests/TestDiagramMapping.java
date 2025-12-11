@@ -83,13 +83,13 @@ public class TestDiagramMapping {
 	
 	@Test
 	public void testReflectiveConfigurator() throws IOException, ParserConfigurationException, SAXException {
-		ReflectiveContributor<Element, EObject> rc = new ReflectiveContributor<>(List.of(new Configurators()));  
+		ReflectiveContributor<Element<?>, EObject> rc = new ReflectiveContributor<>(List.of(new Configurators()));  
 		Document document = Document.load(new File("bootstrap.drawio"));		
 		
 		document.accept(System.out::println);
 		
 		ConnectionBase connectionBase = ConnectionBase.SOURCE;
-		ContentProvider<Element> contentProvider = new DrawioContentProvider(
+		ContentProvider<Element<?>> contentProvider = new DrawioContentProvider(
 				document, 
 				Context.BASE_URI_PROPERTY, 
 				MAPPING_PROPERTY, 
@@ -108,7 +108,7 @@ public class TestDiagramMapping {
 				progressMonitor) {
 
 					@Override
-					protected EObject getByRefId(Element obj, String refId, int pass, Map<Element, EObject> registry) {
+					protected EObject getByRefId(Element<?> obj, String refId, int pass, Map<Element<?>, EObject> registry) {
 						return null;
 					}
 			
@@ -116,14 +116,14 @@ public class TestDiagramMapping {
 		
 		drawioFactory.getContributors().add(rc);
 		
-		Transformer<Element,EObject> modelFactory = new Transformer<>(drawioFactory);
-		List<Element> documentElements = new ArrayList<>();
-		Consumer<Element> visitor = documentElements::add;
+		Transformer<Element<?>,EObject> modelFactory = new Transformer<>(drawioFactory);
+		List<Element<?>> documentElements = new ArrayList<>();
+		Consumer<Element<?>> visitor = documentElements::add;
 		@SuppressWarnings({ "rawtypes", "unchecked" })
 		Consumer<org.nasdanika.graph.Element> traverser = (Consumer) org.nasdanika.drawio.Util.traverser(visitor, connectionBase);
 		document.accept(traverser);
 		
-		Map<Element, EObject> modelElements = modelFactory.transform(documentElements, false, progressMonitor);
+		Map<Element<?>, EObject> modelElements = modelFactory.transform(documentElements, false, progressMonitor);
 		
 		List<EObject> cnt = new ArrayList<>();
 		modelElements.values()
